@@ -12,7 +12,7 @@ class DataCollector:
         self.data_points = []
 
     def collect_data(self):
-        response = requests.get('https://api.weatherapi.com/v1/current.json?key=5c973ab320cc44a7bb3161759240608&q=Ahmedabad')
+        response = requests.get('https://api.weatherapi.com/v1/current.json?key={api_key}=Ahmedabad')
         weather_data = response.json()
         print(weather_data)
         data_point = DataPoint('weather', 'London', weather_data['location']['localtime'], weather_data['current']['temp_c'])
