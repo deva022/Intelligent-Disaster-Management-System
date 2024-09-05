@@ -15,6 +15,14 @@ class Predictor:
         prediction = self.model.predict(np.array([[data_point.value]]))
         return prediction
 
+    def get_severity_level(self, prediction):
+        if prediction <0.2:
+            return "mild"
+        elif prediction <0.6:
+            return "moderate"
+        else:
+            return "severe"
+
 # Example training data (replace with actual historical data)
 X_train = np.array([[15], [18], [20], [25]])
 y_train = np.array([0, 0, 1, 1])
