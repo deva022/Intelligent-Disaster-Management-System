@@ -2,7 +2,6 @@ from data_collection import DataCollector
 from disaster_prediction import Predictor
 from resource_allocation import AllocationManager
 from emergency_routing import Graph
-from communication import CommunicationChannel, Message
 import numpy as np
 
 class Dashboard:
@@ -11,7 +10,6 @@ class Dashboard:
         self.predictor = Predictor()
         self.allocation_manager = AllocationManager()
         self.graph = Graph()
-        self.communication_channel = CommunicationChannel()
 
         # Example training data (replace with actual historical data)
         X_train = np.array([[15], [18], [20], [25]])
@@ -38,9 +36,6 @@ class Dashboard:
         print("Finding shortest path...")
         shortest_distance = self.graph.shortest_path('A', 'C')
         print("Shortest Distance:", shortest_distance)
-        print("Sending message...")
-        message = Message('Dispatcher', 'Rescue Team 1', 'Proceed to location X')
-        self.communication_channel.send_message(message)
 
 if __name__ == "__main__":
     dashboard = Dashboard()
