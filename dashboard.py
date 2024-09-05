@@ -34,7 +34,7 @@ class Dashboard:
         prediction = self.predictor.predict_disaster(self.data_collector.data_points[0])
         print("Prediction:", prediction)
         print("Allocating resources...")
-        self.allocation_manager.allocate_resources()
+        self.allocation_manager.allocate_resources(prediction)
         print("Finding shortest path...")
         shortest_distance = self.graph.shortest_path('A', 'C')
         print("Shortest Distance:", shortest_distance)
