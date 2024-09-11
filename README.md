@@ -10,7 +10,6 @@ The Intelligent Disaster Management System is a comprehensive solution designed 
 - **Disaster Prediction**: Utilizes a machine learning model to predict the likelihood of disasters based on the collected data.
 - **Resource Allocation**: Automatically allocates resources, such as rescue teams and medical supplies, in response to predicted disasters.
 - **Emergency Routing**: Implements Dijkstra's algorithm to find the shortest and safest path for emergency responders.
-- **Communication**: Manages communication between dispatchers and emergency teams to ensure coordinated efforts.
 
 ## Project Structure
 
@@ -20,7 +19,6 @@ The project is organized into the following modules:
 - **`disaster_prediction.py`**: Contains the machine learning model used to predict disasters. The model is trained on historical data to identify patterns that indicate the likelihood of a disaster.
 - **`resource_allocation.py`**: Simulates the allocation of resources based on the predictions made by the model.
 - **`emergency_routing.py`**: Manages the graph data structure used to represent the map and computes the shortest path between locations using Dijkstra’s algorithm.
-- **`communication.py`**: Manages the communication channels between different entities, sending out alerts and instructions during disaster scenarios.
 - **`dashboard.py`**: Integrates all the components and coordinates the overall workflow. It collects data, makes predictions, allocates resources, determines routes, and sends communication messages.
 - **`main.py`**: The entry point of the application, which initiates the system by running the dashboard.
 
